@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#ede9fe"/>
+  <rect x="120" y="90" width="560" height="250" rx="22" fill="#8b5cf6"/>
+  <rect x="160" y="135" width="220" height="36" rx="10" fill="#ddd6fe"/>
+  <rect x="160" y="190" width="320" height="24" rx="8" fill="#c4b5fd"/>
+  <rect x="160" y="230" width="280" height="24" rx="8" fill="#c4b5fd"/>
+  <rect x="520" y="160" width="110" height="90" rx="18" fill="#f5f3ff"/>
+  <path d="M545 205l20 20 40-45" fill="none" stroke="#7c3aed" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="400" y="395" text-anchor="middle" font-size="30" font-family="Arial, sans-serif" fill="#4c1d95">Smart Event Booking System</text>
+</svg>

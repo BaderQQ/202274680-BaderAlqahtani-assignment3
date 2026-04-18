@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#e0f2fe"/>
+  <rect x="70" y="60" width="180" height="110" rx="16" fill="#0ea5e9"/>
+  <rect x="540" y="80" width="180" height="110" rx="16" fill="#38bdf8"/>
+  <rect x="300" y="260" width="200" height="110" rx="16" fill="#0284c7"/>
+  <path d="M160 170 C220 210, 270 240, 370 315 S560 180, 630 190" fill="none" stroke="#0f172a" stroke-width="12" stroke-dasharray="16 12"/>
+  <circle cx="160" cy="170" r="14" fill="#0f172a"/>
+  <circle cx="370" cy="315" r="14" fill="#0f172a"/>
+  <circle cx="630" cy="190" r="14" fill="#0f172a"/>
+  <text x="400" y="420" text-anchor="middle" font-size="30" font-family="Arial, sans-serif" fill="#0f172a">Campus Course Route Planner</text>
+</svg>

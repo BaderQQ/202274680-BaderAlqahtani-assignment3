@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Profile illustration">
+  <rect width="600" height="600" rx="36" fill="#dbeafe"/>
+  <circle cx="300" cy="220" r="110" fill="#93c5fd"/>
+  <circle cx="300" cy="200" r="72" fill="#1e293b"/>
+  <path d="M170 470c18-92 92-145 130-145s112 53 130 145" fill="#2563eb"/>
+  <text x="300" y="540" text-anchor="middle" font-size="30" font-family="Arial, sans-serif" fill="#0f172a">Bader Alqahtani</text>
+</svg>

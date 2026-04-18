@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Bader Alqahtani portfolio featuring software projects, live GitHub repositories, and an interactive frontend experience."
+  />
+  <title>Bader Alqahtani | Portfolio</title>
+  <link rel="preconnect" href="https://api.github.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <h1 class="logo">Bader Alqahtani</h1>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="welcomeBtn" class="btn btn-secondary small" type="button">Set Name</button>
+        <button id="themeBtn" class="btn small" type="button" aria-label="Toggle theme">🌙 Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero reveal">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Software Engineering Student • KFUPM</p>
+          <h2>Building practical software solutions with clean engineering and thoughtful problem solving.</h2>
+          <p class="lead">
+            I’m Bader Alqahtani, a software engineering student focused on web development,
+            product-minded thinking, and building useful tools that combine strong structure,
+            clear user experience, and maintainable code.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#projects">Explore Projects</a>
+            <a class="btn btn-secondary" href="#github">See Live GitHub Work</a>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-card">
+              <span class="stat-label">Welcome</span>
+              <strong id="visitorName">Guest</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Time on Site</span>
+              <strong id="visitTimer">00:00</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Theme</span>
+              <strong id="themeStatus">Light</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <img
+            src="assets/images/myPic.jpeg"
+            alt="Illustrated profile card for Bader Alqahtani"
+            width="520"
+            height="520"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="container about-grid">
+        <div>
+          <h2>About Me</h2>
+          <p class="tagline">Junior software engineering student with a strong interest in building useful products.</p>
+          <p>
+            I enjoy turning ideas into usable web experiences through structured design,
+            careful implementation, and continuous refinement. My work combines frontend
+            development, programming fundamentals, and a practical mindset toward solving
+            real problems.
+          </p>
+          <p>
+            I’m especially interested in interface design, JavaScript-based interactivity,
+            Python development, and using modern tools to improve both engineering workflow
+            and final user experience.
+          </p>
+        </div>
+
+        <aside class="card info-panel" aria-label="Quick portfolio highlights">
+          <h3>Focus Areas</h3>
+          <ul>
+            <li>Interactive frontend experiences</li>
+            <li>Clean, maintainable JavaScript logic</li>
+            <li>Real data integration through public APIs</li>
+            <li>Responsive and user-friendly interfaces</li>
+            <li>Continuous improvement through testing and iteration</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2>Projects</h2>
+            <p class="muted">Browse selected work by keyword, category, complexity, or timeline.</p>
+          </div>
+          <button id="toggleProjectsBtn" class="btn btn-secondary small" type="button">
+            Hide Projects
+          </button>
+        </div>
+
+        <div class="control-panel card">
+          <div class="control-group">
+            <label for="projectSearch">Search</label>
+            <input type="text" id="projectSearch" placeholder="Search by title or keyword" />
+          </div>
+
+          <div class="control-group">
+            <label for="categoryFilter">Category</label>
+            <select id="categoryFilter">
+              <option value="all">All Categories</option>
+              <option value="web">Web</option>
+              <option value="tools">Tools</option>
+              <option value="ai">AI</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="levelFilter">Project Depth</label>
+            <select id="levelFilter">
+              <option value="all">All Levels</option>
+              <option value="beginner">Beginner</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="sortProjects">Sort By</label>
+            <select id="sortProjects">
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="name">Name (A-Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <p id="projectHint" class="level-hint" aria-live="polite"></p>
+        <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+        <p id="emptyState" class="empty-state" hidden>No projects match your current filters.</p>
+      </div>
+    </section>
+
+    <section id="github" class="section reveal">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <h2>GitHub Activity</h2>
+            <p class="muted">A live snapshot of selected public repositories.</p>
+          </div>
+          <button id="refreshReposBtn" class="btn btn-secondary small" type="button">Refresh</button>
+        </div>
+
+        <div class="github-summary card">
+          <div>
+            <span class="stat-label">Source</span>
+            <strong>github.com/BaderQQ</strong>
+          </div>
+          <div>
+            <span class="stat-label">Repository Count</span>
+            <strong id="repoCount">--</strong>
+          </div>
+          <div>
+            <span class="stat-label">Status</span>
+            <strong id="repoStatus">Loading...</strong>
+          </div>
+        </div>
+
+        <div id="repoMessage" class="api-message" role="status" aria-live="polite"></div>
+        <div id="repoGrid" class="repo-grid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="muted">Feel free to reach out for collaboration, ideas, or project discussions.</p>
+
+        <form id="contactForm" class="form card" novalidate>
+          <label>
+            Name
+            <input type="text" id="name" placeholder="Your full name" />
+            <small class="error-text" id="nameError"></small>
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="email" placeholder="you@example.com" />
+            <small class="error-text" id="emailError"></small>
+          </label>
+
+          <label>
+            Subject
+            <input type="text" id="subject" placeholder="What would you like to discuss?" />
+            <small class="error-text" id="subjectError"></small>
+          </label>
+
+          <label>
+            Message
+            <textarea id="message" rows="5" placeholder="Write your message..."></textarea>
+            <small class="error-text" id="messageError"></small>
+          </label>
+
+          <label class="checkbox-row">
+            <input type="checkbox" id="agree" />
+            <span>I confirm the information above is accurate.</span>
+          </label>
+          <small class="error-text" id="agreeError"></small>
+
+          <button class="btn" type="submit">Send Message</button>
+          <p id="formMsg" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <small>© <span id="year"></span> Bader Alqahtani. All rights reserved.</small>
+      <small>Designed and built with HTML, CSS, and JavaScript.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
